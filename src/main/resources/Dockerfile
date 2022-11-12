@@ -1,11 +1,11 @@
-FROM maven:3.8.6-openjdk-11 as builder
-MAINTAINER yu.chenhang@gmail.com
-WORKDIR /build
-COPY pom.xml .
-RUN mvn -B dependency:go-offline
-COPY . .
-RUN mvn package
-
+#FROM maven:3.8.6-openjdk-11 as builder
+#MAINTAINER yu.chenhang@gmail.com
+#WORKDIR /build
+#COPY pom.xml .
+#RUN mvn -B dependency:go-offline
+#COPY . .
+#RUN mvn package
+#
 FROM openjdk:11
 MAINTAINER yu.chenhang@gmail.com
 WORKDIR /app
